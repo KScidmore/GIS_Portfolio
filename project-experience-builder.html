@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Elk Creek Hydrology Explorer App - Kyle Scidmore</title>
+    <meta name="description" content="Details of an interactive web application built with ArcGIS Experience Builder to explore hydrological and morphological data for Elk Creek.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+       <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-blue-700 hover:text-blue-800">
+                    Kyle Scidmore
+                </a>
+                 <div class="hidden md:flex space-x-6">
+                     <a href="index.html#hero" class="text-gray-600 hover:text-blue-600 transition duration-200">Home</a>
+                     <a href="index.html#projects" class="text-gray-600 hover:text-blue-600 transition duration-200">Projects</a>
+                     <a href="index.html#about" class="text-gray-600 hover:text-blue-600 transition duration-200">About</a>
+                     <a href="index.html#contact" class="text-gray-600 hover:text-blue-600 transition duration-200">Contact</a>
+                 </div>
+                 <div class="md:hidden">
+                     <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                     </button>
+                 </div>
+             </div>
+              <div id="mobile-menu" class="md:hidden hidden mt-3 space-y-1">
+                 <a href="index.html#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600">Home</a>
+                 <a href="index.html#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600">Projects</a>
+                 <a href="index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600">About</a>
+                 <a href="index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600">Contact</a>
+              </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+
+            <a href="index.html#projects" class="text-blue-600 hover:underline mb-6 inline-block">&larr; Back to Projects</a>
+
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Elk Creek: Hydrology and Morphology Explorer</h1>
+            <p class="text-lg text-gray-600 mb-6">An interactive web application for exploring hydrological analysis results in the Elk Creek study area.</p>
+
+            <div class="my-8 p-4 bg-teal-100 border-l-4 border-teal-500 rounded">
+                 <h2 class="text-xl font-semibold text-teal-800 mb-2">Explore the Interactive Application</h2>
+                 <p class="text-teal-700 mb-3">
+                     Use this web application built with ArcGIS Experience Builder to interactively view the various hydrological and morphological data layers for Elk Creek.
+                 </p>
+                 <a href="https://experience.arcgis.com/experience/a46d136a50984384bfaf634e76bfb168" target="_blank" rel="noopener noreferrer" class="inline-block bg-teal-600 text-white font-semibold px-6 py-2 rounded-md hover:bg-teal-700 transition duration-300 shadow">
+                    Launch Elk Creek Explorer App &rarr;
+                </a>
+            </div>
+             <div class="mb-8 bg-gray-100 p-4 rounded">
+                <img src="./images/app.PNG" alt="Screenshot of the Elk Creek Hydrology Explorer App Interface" class="max-w-4xl mx-auto rounded shadow-md">
+                 <p class="text-center text-sm text-gray-500 mt-2">Interface of the Elk Creek Hydrology and Morphology Explorer application.</p>
+            </div>
+
+
+            <div class="prose prose-lg max-w-none">
+                <h2 class="text-2xl font-semibold mb-3">App Purpose & Use Cases</h2>
+                <p>
+                    The primary purpose of this application was to provide an interactive platform for exploring the spatial datasets generated during the Elk Creek PALS placement analysis. It allows users to visualize and compare hydrological and morphological layers like Stream Power Index, slope, curvature, flow patterns, elevation, and orthoimagery directly within a web browser. The app includes an introductory card that also links to the full analysis StoryMap for further context.
+                </p>
+                <p>
+                    Potential users could use this app to:
+                </p>
+                 <ul class="list-disc my-2 pl-6">
+                    <li>Get a brief overview and link directly to the comprehensive StoryMap analysis via the introductory Card widget.</li>
+                    <li>Visually correlate different datasets (e.g., high SPI vs. steep slopes).</li>
+                    <li>Understand the real-world context using orthoimagery and basemaps.</li>
+                    <li>Explore the study area dynamically by panning, zooming, and toggling layers.</li>
+                    <li>Utilize measurement tools for basic distance/area estimations.</li>
+                    <li>Serve as a visual aid for presentations or discussions about the Elk Creek analysis.</li>
+                 </ul>
+
+
+                <h2 class="text-2xl font-semibold mt-6 mb-3">Development Process & Widgets</h2>
+                <p>
+                    This application was built using ArcGIS Experience Builder. The core process involved:
+                </p>
+                <ol>
+                    <li>Creating the map.</li>
+                    <li>Choosing a suitable template for the task.</li>
+                    <li>Adding and configuring widgets for user interaction:
+                        <ul class="list-disc my-2 pl-6">
+                            <li><strong>Card:</strong> Provides introductory text and a prominent button linking directly to the full project StoryMap.</li>
+                            <li><strong>Layer List:</strong> Allows users to toggle data layer visibility.</li>
+                            <li><strong>Legend:</strong> Enables interpretation of map symbology for visible layers.</li>
+                            <li><strong>Basemap Gallery:</strong> Offers options for changing the background map.</li>
+                            <li><strong>Coordinates:</strong> Displays the geographic coordinates of the cursor location.</li>
+                            <li><strong>Measurement:</strong> Provides tools for calculating distances and areas.</li>
+                        </ul>
+                    </li>
+                    <li>Arranging these widgets within the application layout.</li>
+                </ol>
+
+
+                <h2 class="text-2xl font-semibold mt-6 mb-3">Data Layers Included</h2>
+                <p>The application allows exploration of the following datasets hosted in ArcGIS Online:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Stream Power Index (SPI) Raster</li>
+                    <li>Slope Raster</li>
+                    <li>Curvature Raster</li>
+                    <li>Flow Accumulation Raster</li>
+                    <li>Flow Direction Raster</li>
+                    <li>Digital Elevation Model (DEM)</li>
+                    <li>Orthoimagery</li>
+                    <li>Standard ArcGIS Online Basemaps</li>
+                 </ul>
+
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 mt-16 py-6">
+       <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            &copy; <span id="current-year"></span> Kyle Scidmore. All rights reserved.
+            <p class="mt-1">Built with HTML, Tailwind CSS, and JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script> </body>
+</html>

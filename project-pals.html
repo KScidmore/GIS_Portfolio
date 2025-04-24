@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Optimizing PALS Placement in Elk Creek - Kyle Scidmore</title>
+    <meta name="description" content="Details of a GIS analysis project focused on Post-Assisted Log Structure placement for stream restoration in Elk Creek, Alberta.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+     </head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+       <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-blue-700 hover:text-blue-800">
+                    Kyle Scidmore
+                </a>
+                 <div class="hidden md:flex space-x-6">
+                     <a href="index.html#hero" class="text-gray-600 hover:text-blue-600 transition duration-200">Home</a>
+                     <a href="index.html#projects" class="text-gray-600 hover:text-blue-600 transition duration-200">Projects</a>
+                     <a href="index.html#about" class="text-gray-600 hover:text-blue-600 transition duration-200">About</a>
+                     <a href="index.html#contact" class="text-gray-600 hover:text-blue-600 transition duration-200">Contact</a>
+                 </div>
+                 <div class="md:hidden">
+                     <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                     </button>
+                 </div>
+             </div>
+              <div id="mobile-menu" class="md:hidden hidden mt-3 space-y-1">
+                 <a href="index.html#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600">Home</a>
+                 <a href="index.html#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600">Projects</a>
+                 <a href="index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600">About</a>
+                 <a href="index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600">Contact</a>
+              </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+
+            <a href="index.html#projects" class="text-blue-600 hover:underline mb-6 inline-block">&larr; Back to Projects</a>
+
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Optimizing PALS Placement in Elk Creek</h1>
+            <p class="text-lg text-gray-600 mb-6">A GIS-based assessment and recommendation strategy for enhancing Bull Trout habitat using Post-Assisted Log Structures.</p>
+
+            <div class="my-8 p-4 bg-indigo-100 border-l-4 border-indigo-500 rounded">
+                 <h2 class="text-xl font-semibold text-indigo-800 mb-2">Explore the Interactive StoryMap</h2>
+                 <p class="text-indigo-700 mb-3">
+                     For a detailed, interactive exploration of the study area, methodology, analysis results, and recommendations, please view the full ArcGIS StoryMap.
+                 </p>
+                 <a href="https://arcg.is/Ge4rP0" target="_blank" rel="noopener noreferrer" class="inline-block bg-indigo-600 text-white font-semibold px-6 py-2 rounded-md hover:bg-indigo-700 transition duration-300 shadow">
+                    View Elk Creek StoryMap &rarr;
+                </a>
+            </div>
+
+            <div class="mb-8 bg-gray-100 p-4 rounded">
+                <img src="./images/PALS.jpg"
+                     alt="Map showing recommended PALS placements in Elk Creek"
+                     class="max-w-3xl mx-auto rounded shadow-md">
+                     <p class="text-center text-sm text-gray-500 mt-2">Map showing recommended PALS placements based on GIS analysis.</p>
+            </div>
+
+
+            <div class="prose prose-lg max-w-none">
+                <h2 class="text-2xl font-semibold mb-3">Project Overview</h2>
+                <p>
+                    Elk Creek, Alberta, provides critical habitat for threatened Bull Trout but faces degradation from land use and artificial structures. Post-Assisted Log Structures (PALS) are used in restoration efforts by Freshwater Canada. This project aimed to assess the effectiveness of existing PALS and identify optimal locations for additional structures by leveraging GIS analysis to maximize habitat benefits. The core objective was to develop a data-driven strategy for PALS placement focusing on enhancing stream complexity, sinuosity, and woody debris recruitment within a target reach downstream of a constricting bridge.
+                </p>
+
+                <h2 class="text-2xl font-semibold mt-6 mb-3">My Role & Process</h2>
+                 <p>As the sole researcher for this class project, my responsibilities included:</p>
+                <ul>
+                    <li>Creating and preparing a LiDAR derived DEM for hydrological analysis.</li>
+                    <li>Performing hydrological analysis using ArcGIS Pro (Flow Direction, Flow Accumulation, Slope, Curvature).</li>
+                    <li>Calculating Stream Power Index (SPI) to assess erosion potential.</li>
+                    <li>Synthesizing analysis results to create an Erosion Susceptibility map identifying high-risk banks.</li>
+                    <li>Developing a PALS placement strategy based on analysis, literature, and project goals (targeting high erosion zones near wood sources).</li>
+                    <li>Running basic 3D flow simulations to visualize potential impacts of recommended PALS.</li>
+                    <li>Creating map layouts and an interactive ArcGIS StoryMap to present the methodology, results, and recommendations.</li>
+                 </ul>
+
+                <h2 class="text-2xl font-semibold mt-6 mb-3">Tools & Technologies</h2>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>GIS Software:</strong> ArcGIS Pro (Hydrology Toolset, Surface Toolset)</li>
+                     <li><strong>Web GIS:</strong> ArcGIS Online, ArcGIS StoryMaps</li>
+                     <li><strong>Data Sources:</strong> Sawback Technologies, Freshwater Canada, 2024, [Elk Creek LiDAR Point Cloud Data], [Elk Creek Orthographic Data].</li>
+                </ul>
+
+                <h2 class="text-2xl font-semibold mt-6 mb-3">Results & Key Findings</h2>
+                <p>
+                    The analysis indicated that while existing PALS are contributing positively, specific opportunities exist for enhancement. High-risk erosion zones coinciding with significant stream power and favorable bank shapes were identified. The recommended PALS placements target these zones to strategically leverage natural stream energy for increased habitat complexity, sinuosity, and wood recruitment. Flow simulations provided visual support, suggesting the recommended PALS would increase flow interaction with targeted banks. The full results and detailed recommendations are presented in the linked StoryMap.
+                </p>
+
+                <h3 class="text-xl font-semibold mt-6 mb-3">Additional Visuals</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <img src="./images/SPI.png" alt="SPI Map Screenshot" class="rounded shadow">
+                    <img src="./images/sim.png" alt="3D Flow Simulation Screenshot" class="rounded shadow">
+                 </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 mt-16 py-6">
+       <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            &copy; <span id="current-year"></span> Kyle Scidmore. All rights reserved.
+            <p class="mt-1">Built with HTML, Tailwind CSS, and JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script> </body>
+</html>
