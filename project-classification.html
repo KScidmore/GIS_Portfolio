@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Supervised Land Cover Classification - Kyle Scidmore</title>
+    <meta name="description" content="Details of a GIS project involving supervised image classification and accuracy assessment for land cover mapping.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+     </head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+       <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-blue-700 hover:text-blue-800">
+                    Kyle Scidmore
+                </a>
+                 <div class="hidden md:flex space-x-6">
+                     <a href="index.html#hero" class="text-gray-600 hover:text-blue-600 transition duration-200">Home</a>
+                     <a href="index.html#projects" class="text-gray-600 hover:text-blue-600 transition duration-200">Projects</a>
+                     <a href="index.html#about" class="text-gray-600 hover:text-blue-600 transition duration-200">About</a>
+                     <a href="index.html#contact" class="text-gray-600 hover:text-blue-600 transition duration-200">Contact</a>
+                 </div>
+                 <div class="md:hidden">
+                     <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                     </button>
+                 </div>
+             </div>
+              <div id="mobile-menu" class="md:hidden hidden mt-3 space-y-1">
+                 <a href="index.html#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600">Home</a>
+                 <a href="index.html#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600">Projects</a>
+                 <a href="index.html#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600">About</a>
+                 <a href="index.html#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-600">Contact</a>
+              </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <article class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+
+            <a href="index.html#projects" class="text-blue-600 hover:underline mb-6 inline-block">&larr; Back to Projects</a>
+
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Supervised Land Cover Classification</h1>
+            <p class="text-lg text-gray-600 mb-6">Performing supervised image classification and accuracy assessment for land cover mapping using ArcGIS Pro.</p>
+
+            <div class="mb-8 bg-gray-100 p-4 rounded">
+                <img src="./images/final.png" alt="Final Land Cover Classification Map" class="max-w-3xl mx-auto rounded shadow-md">
+                <p class="text-center text-sm text-gray-500 mt-2">Final land cover classification map using a Support Vector Machine classifier.</p>
+            </div>
+
+
+            <div class="prose prose-lg max-w-none">
+                <h2 class="text-2xl font-semibold mb-3">Project Overview</h2>
+                <p>
+                    This lab project simulated a real-world scenario requiring the production and evaluation of a land cover classification map. The primary objective was to perform a supervised, pixel-based classification on provided multispectral imagery and conduct a thorough accuracy assessment to evaluate the reliability of the results. This involved defining training data, running the classification algorithm, refining the results, and analyzing classification accuracy using a confusion matrix.
+                </p>
+
+                <h2 class="text-2xl font-semibold mt-6 mb-3">My Role & Process</h2>
+                 <p>As the sole analyst for this lab, my responsibilities covered the entire workflow:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Generating a classification schema and creating representative training area polygons for various land cover types (Water, Gravel, Bare Ground, Shrub, Grassland, Forest).</li>
+                    <li>Executing a supervised pixel-based classification using the Support Vector Machine (SVM) algorithm within the ArcGIS Pro Image Classification Wizard.</li>
+                    <li>Performing initial classification runs and refining the results through manual reclassification or merging of similar classes.</li>
+                    <li>Creating accuracy assessment points and assigning ground truth values through visual inspection.</li>
+                    <li>Conducting a quantitative accuracy assessment using the validation points and the classified map.</li>
+                    <li>Generating and interpreting a confusion matrix, including calculating overall, producer's, and user's accuracies.</li>
+                    <li>Documenting the process, identifying challenges (including initial attempts and issues with object-based classification), and suggesting potential improvements.</li>
+                 </ul>
+
+                <h2 class="text-2xl font-semibold mt-6 mb-3">Tools & Technologies</h2>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>GIS Software:</strong> ArcGIS Pro</li>
+                    <li><strong>Classifier:</strong> Support Vector Machine (SVM)</li>
+                    <li><strong>Key Tools:</strong> Image Classification Wizard, Create Accuracy Assessment Points, Compute Confusion Matrix</li>
+                    <li><strong>Data Sources:</strong> Provided orthographic imagery (`Lab.tif`)</li>
+                    <li><strong>Other Software:</strong> Microsoft Excel (for confusion matrix analysis/visualization)</li>
+                 </ul>
+
+                <h2 class="text-2xl font-semibold mt-6 mb-3">Results & Key Findings</h2>
+                <p>
+                    The primary objectives were met, resulting in a final pixel-based land cover map and a detailed accuracy assessment. The accuracy assessment revealed varied performance across different land cover classes. Gravel showed perfect user's accuracy, indicating high reliability when classified, although some gravel pixels were missed (lower producer's accuracy). Water was also classified relatively well. However, significant confusion occurred between Forest, Shrub, and Grassland classes, with Forest showing particularly low producer's and user's accuracies. This confusion was likely due to spectral similarities and variability within these vegetation classes. The accuracy assessment itself was limited by the number and visual interpretation of validation points, and the inherent limitations of pixel-based methods were acknowledged. Recommendations for improvement included using more comprehensive training data and potentially object-based classification methods (if software instability could be resolved).
+                </p>
+
+                <h3 class="text-xl font-semibold mt-6 mb-3">Additional Visuals</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <img src="./images/training.png" alt="Map showing training areas used" class="rounded shadow">
+                    <img src="./images/early.png" alt="Early classification result screenshot" class="rounded shadow">
+                 </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 mt-16 py-6">
+       <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            &copy; <span id="current-year"></span> Kyle Scidmore. All rights reserved.
+            <p class="mt-1">Built with HTML, Tailwind CSS, and JavaScript.</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script> </body>
+</html>
